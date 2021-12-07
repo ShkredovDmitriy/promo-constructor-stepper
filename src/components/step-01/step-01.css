@@ -1,0 +1,68 @@
+.step {
+  position: absolute;
+  top: 6.25rem;
+  width: 100%;
+  height: calc(100vh - 12.5rem);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 2px solid #fff;
+  transform: translateX(-101vw);
+  transition: transform 0.5s;
+
+}
+
+.step--active {
+  transform: translateX(0);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
+  border: 2px solid #fff;
+  background-color: rgb(47, 47, 182);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.card--high {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  border: 2px solid #fff;
+  background-color: rgb(47, 47, 182);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+/*
+.card:hover {
+  background-color: rgb(24, 24, 129);
+} */
+
+.card--checked {
+  background-color: rgb(24, 24, 129)!important;
+}
+
+.card__name {
+  font-size: 1rem;
+  color: #fff;
+}
+
+
+/* BUTTON */
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+}

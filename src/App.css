@@ -1,0 +1,17 @@
+html, body {
+  font-size: 1rem;
+  line-height: 1.25;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
