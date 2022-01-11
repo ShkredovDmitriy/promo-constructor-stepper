@@ -6,12 +6,18 @@ import Header from './components/header/header';
 import Stepper from './components/stepper/stepper';
 import Footer from "./components/footer/footer";
 
+// TODO: add typescript
+// TODO: add validation + sticks
+// TODO: add 3 jest test
+// TODO: add total summ in header
+// TODO: refactoring
+
 function App() {
 
   log("App", promoConfig);
 
   const [stepData, setStepData] = useState({});
-  const [totalPrice, setTotalPrice] = useState([]);
+  const [totalPrice, setTotalPrice] = useState(0);
   const [step, setStep] = useState(0);
 
   function showNextStep(){
@@ -40,6 +46,7 @@ function App() {
     <section className="main-wrapper">
       <Header
         stepData = { stepData }
+        totalPrice = {totalPrice}
       />
       <Stepper
         stepData = { stepData }

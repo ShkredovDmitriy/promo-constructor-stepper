@@ -41,37 +41,50 @@ const promoConfig = {
     {
       index: 3,
       title: "Шаг 3",
-      subtitle: "Выберите дизайн промокампании"
+      subtitle: "Выберите дизайн промокампании",
+      type: "selectOneOf",
     },
     {
       index: 4,
       title: "Шаг 4",
-      subtitle: "Выберите тип регистрации"
+      subtitle: "Выберите тип регистрации",
+      type: "selectOneOf",
     },
     {
       index: 5,
       title: "Шаг 5",
-      subtitle: "Выберите тип авторизации"
+      subtitle: "Выберите тип авторизации",
+      type: "selectOneOf",
     },
     {
       index: 6,
       title: "Шаг 6",
-      subtitle: "Выберите тип авторизации"
+      subtitle: "Выберите тип авторизации",
+      type: "selectOneOf",
     },
     {
       index: 7,
       title: "Шаг 7",
-      subtitle: "Выберите способ внесения данных участниками"
+      subtitle: "Выберите способ внесения данных участниками",
+      type: "selectOneOf",
     },
     {
       index: 8,
       title: "Шаг 8",
-      subtitle: "Выберите тип розыгрыша"
+      subtitle: "Выберите тип розыгрыша",
+      type: "selectOneOf",
     },
     {
       index: 9,
       title: "Шаг 9",
-      subtitle: "Выберите способ поощрения победителей"
+      subtitle: "Выберите способ поощрения победителей",
+      type: "selectOneOf",
+    },
+    {
+      index: 10,
+      title: "Шаг 10",
+      subtitle: "Демонстрационная версия готова к просмотру",
+      type: "clickDemoLink",
     },
   ]
 }
