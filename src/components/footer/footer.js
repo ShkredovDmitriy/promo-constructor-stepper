@@ -1,13 +1,27 @@
 import React from "react";
 import "./footer.css";
+import log from "../../_helpers/log";
 
 function Footer(props) {
-  return <header className="footer">
-    <button
+
+  log("Footer", props);
+
+  return <footer className="footer">
+    <div className="footer__part">
+      <button
       className="button button--footer"
-      onClick={props.onNext}
-    >Продолжить</button>
-  </header>
+      onClick={props.onClickPrev}
+    >Вернуться</button>
+    </div>
+    <div className="footer__part footer__part--center">
+      <button
+        className="button button--footer"
+        onClick={props.onClickNext}
+      >Продолжить</button>
+    </div>
+    <div className="footer__part">
+    </div>
+  </footer>
 }
 
 export default Footer;

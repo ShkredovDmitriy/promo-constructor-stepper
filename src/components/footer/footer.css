@@ -1,7 +1,7 @@
 .footer {
   margin-top: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction:row;
   align-items: center;
   justify-content: center;
   height: 6.25rem;
@@ -9,6 +9,17 @@
   border-top: 0;
   background-color: rgb(47, 47, 182);
   overflow: hidden;
+}
+
+.footer__part {
+  display: flex;
+  align-items: center;
+  padding: 0 1.25rem;
+  width: 33.3%;
+}
+
+.footer__part--center {
+  justify-content: center;
 }
 
 .button--footer {

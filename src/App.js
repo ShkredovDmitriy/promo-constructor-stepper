@@ -1,48 +1,53 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import './App.css';
+import log from "./_helpers/log";
+import promoConfig from "./promoConfig";
 import Header from './components/header/header';
-import Step01 from './components/step-01/step-01';
-import Step02 from './components/step-02/step-02';
+import Stepper from './components/stepper/stepper';
 import Footer from "./components/footer/footer";
 
 function App() {
 
-  const config = {
-    stepTitle: [
-      "Укажите тип промокампании:",
-      "Укажите период проведения промокампании:",
-    ]
+  log("App", promoConfig);
+
+  const [stepData, setStepData] = useState({});
+  const [totalPrice, setTotalPrice] = useState([]);
+  const [step, setStep] = useState(0);
+
+  function showNextStep(){
+    log("onClickNext")
+    const nextStep = step + 1;
+    if(nextStep < promoConfig.steps.length){
+      setStep(nextStep);
+      setStepData(promoConfig.steps[nextStep]);
+    }
   }
 
-  const [state, setState] = useState("")
-  const [step, setStep] = useState("step01")
-
-  function step01Checker(card) {
-    console.log("card " + card)
-    if(card === "variant01") setState("variant01")
-    if(card === "variant02") setState("variant02")
-    if(card === "variant03") setState("variant03")
-    if(card === "variant04") setState("variant04")
+  function showPrevStep(){
+    log("onClickNext")
+    const prevStep = step - 1;
+    if (prevStep >= 0){
+      setStep(prevStep);
+      setStepData(promoConfig.steps[prevStep]);
+    }
   }
 
-  function nextCard(){
-    console.log("next")
-    setStep("step02")
-  }
+  useEffect(function(){
+    setStepData(promoConfig.steps[0]);
+  }, [])
 
   return (
     <section className="main-wrapper">
-      <Header/>
-      <Step01
-        onCheck={step01Checker}
-        activeCard={state}
-        currentStep={step}
+      <Header
+        stepData = { stepData }
       />
-      <Step02
-        currentStep={step}
+      <Stepper
+        stepData = { stepData }
       />
       <Footer
-        onNext={nextCard}
+        stepData = { stepData }
+        onClickNext={showNextStep}
+        onClickPrev={showPrevStep}
       />
     </section>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import "./step-01.css";
+import "./stepper.css";
 
 function Step01(props) {
   return <div

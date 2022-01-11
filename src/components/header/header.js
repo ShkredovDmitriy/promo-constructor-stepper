@@ -1,10 +1,14 @@
 import React from "react";
 import "./header.css";
+import log from "../../_helpers/log";
 
-function Header() {
+function Header(props) {
+
+  log("Header", props);
+
   return <header className="header">
-    <div className="title">Шаг 1</div>
-    <div className="subtitle">Укажите тип промокампании:</div>
+    <div className="title">{props.stepData.title}</div>
+    <div className="subtitle">{props.stepData.subtitle}</div>
   </header>
 }
 
