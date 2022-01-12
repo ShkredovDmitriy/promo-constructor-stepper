@@ -1,0 +1,9 @@
+.stick__container {
+  position: fixed;
+  bottom: 8rem;
+  right: 1.875rem;
+  width: 18.75rem;
+  padding: 1rem;
+  background-color: red;
+  color: #fff;
+}
