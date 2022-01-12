@@ -13,6 +13,7 @@ import { Stick } from './elements/stick/stick';
 // TODO: add 3 jest test
 // TODO: add total summ in header
 // TODO: refactoring
+// TODO: add ftp-deploy
 
 function App() {
 
