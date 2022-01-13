@@ -3,32 +3,32 @@ const promoConfig = {
     {
       index: 1,
       title: "Шаг 1",
-      subtitle: "Выберите тип промокампании",
+      subtitle: "Выберите тип промо кампании",
       type: "selectOneOf",
       elements: [
         {
           id: 11,
-          title: "Тип 1",
+          title: "Чековая промо кампания",
           info: "Данный тип имеет следующие преимущества...",
-          price: 10000
+          price: 100000
         },
         {
           id: 12,
-          title: "Тип 2",
+          title: "Sales promotion промо кампания",
           info: "Данный тип имеет следующие преимущества...",
-          price: 15000
+          price: 120000
         },
         {
           id: 13,
-          title: "Тип 3",
+          title: "Sales promotion промо кампания",
           info: "Данный тип имеет следующие преимущества...",
-          price: 20000
+          price: 150000
         },
         {
           id: 14,
-          title: "Тип 4",
+          title: "Sales promotion промо кампания",
           info: "Данный тип имеет следующие преимущества...",
-          price: 25000
+          price: 200000
         }
       ]
     },

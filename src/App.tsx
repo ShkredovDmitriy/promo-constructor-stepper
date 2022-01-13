@@ -19,7 +19,7 @@ function App() {
 
   log("App", promoConfig);
 
-  const [stepData, setStepData] = useState({});
+  const [stepData, setStepData] = useState(promoConfig.steps[0]);
   const [totalPrice, setTotalPrice] = useState(0);
   const [step, setStep] = useState(0);
 
@@ -41,18 +41,20 @@ function App() {
     }
   }
 
-  useEffect(function(){
-    setStepData(promoConfig.steps[0]);
-  }, [])
+  function cardClickHandler(item: {price: number}): void {
+    log("cardClickHandler", item);
+    setTotalPrice(item.price)
+  }
 
   return (
     <section className="main-wrapper">
       <Header
-        stepData = { stepData }
+        stepData = { stepData}
         totalPrice = {totalPrice}
       />
       <Stepper
-        stepData = { stepData }
+        stepData = { stepData}
+        cardClickHandler = { cardClickHandler }
       />
       <Footer
         step = { step }

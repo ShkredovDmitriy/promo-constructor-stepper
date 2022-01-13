@@ -1,11 +1,28 @@
 import React from "react";
 import "./stepper.css";
+import log from "../../_helpers/log";
 
-function Step01(props) {
-  return <div
-    className={props.currentStep === "step01" ? "step step--01 step--active" : "step step--01" }
-  >
-    <div
+function Stepper(props) {
+
+  log("Stepper", props)
+
+  return <div className="stepper">
+    {
+      props.stepData.elements.map((item, id) => {
+        return(
+          <div
+            className="card" key={id}
+            onClick={() => props.cardClickHandler(item) }
+          >
+            <div className="card__title">{item.title}</div>
+            <div className="card__price">Базовая стоимость {item.price} р. / месяц</div>
+          </div>
+        )
+      })
+    }
+
+
+    {/* <div
       className={props.activeCard === "variant01" ? "card card--checked" : "card" }
       onClick={()=> props.onCheck("variant01")}
     >
@@ -28,8 +45,8 @@ function Step01(props) {
       onClick={()=> props.onCheck("variant04")}
     >
       <div className="card__name">Тип промокампании 4</div>
-    </div>
+    </div> */}
   </div>
 }
 
-export default Step01;
+export default Stepper;

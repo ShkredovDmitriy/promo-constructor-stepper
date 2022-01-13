@@ -1,4 +1,4 @@
-.step {
+.stepper {
   position: absolute;
   top: 6.25rem;
   width: 100%;
@@ -7,13 +7,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   border: 2px solid #fff;
-  transform: translateX(-101vw);
+  /* transform: translateX(-101vw); */
   transition: transform 0.5s;
 
-}
-
-.step--active {
-  transform: translateX(0);
 }
 
 .card {
@@ -26,7 +22,23 @@
   border: 2px solid #fff;
   background-color: rgb(47, 47, 182);
   transition: background-color 0.3s;
+  color: #fff;
   cursor: pointer;
+}
+
+.card:hover {
+  background-color: rgb(24, 24, 129);
+}
+
+
+.card__title {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+}
+
+.card__price {
+  margin-top: 2rem;
+  font-size: 1rem;
 }
 
 .card--high {
@@ -48,7 +60,7 @@
 } */
 
 .card--checked {
-  background-color: rgb(24, 24, 129)!important;
+  background-color: rgb(24, 24, 129);
 }
 
 .card__name {
